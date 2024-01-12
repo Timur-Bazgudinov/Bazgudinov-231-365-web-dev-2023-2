@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="wrapper">
+        <form class="form" method="post" action="https://httpbin.org/post">
+            <div class="block-holder">
+                <div class="block">
+                    <div class="label">
+                        <label for="login">Введите логин</label>
+                    </div>
+                    <div class="input">
+                        <input id="login" name="login" type="text" required>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="label">
+                        <label for="password">Введите пароль</label>
+                    </div>
+                    <div class="input">
+                        <input id="password" name="password" type="password" required>
+                    </div>
+                </div>
+
+                <div class="block-row">
+                    <div class="label">
+                        <label for="remember">Запомнить меня</label>
+                    </div>
+                    <div class="checkbox">
+                        <input id="remember" name="remember" type="checkbox">
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="button">
+                        <input type="submit" value="Войти">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
