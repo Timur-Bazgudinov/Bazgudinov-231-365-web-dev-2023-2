@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Форма обратной связи</h1>
+    </header>
+    <main>
+        <form method="post" action="https://httpbin.org/post" enctype="multipart/form-data">
+            <div class="block">
+                <div class="label"><label for="fio">ФИО</label></div>
+                <div class="element">
+                    <input type="text" name="fio" id="fio" placeholder="Иванов Иван Иванович" required>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="label"><label for="email">Адрес электронной почты</label></div>
+                <div class="element">
+                    <input type="email" name="email" id="email" placeholder="ivan@ivanov.ru" required>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="label"><label>Откуда вы узнали о нас?</label></div>
+                <div>
+                    <div class="element">
+                        <input type="radio" id="fromfriends" value="from-friends" name="wherefrom" required>
+                        <label for="fromfriends">Рассказали друзья</label>
+                    </div>
+                    <div class="element">
+                        <input type="radio" id="frominternet" value="from-internet" name="wherefrom" required>
+                        <label for="frominternet">Реклама в интернете</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="label"><label for="category">Категория обращения</label></div>
+                <div class="element">
+                    <select id="category" name="category">
+                        <option value="proposal">Предложение</option>
+                        <option value="complaint">Жалоба</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="label"><label for="message">Текст сообщения</label></div>
+                <div class="element">
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+            </div>
+            
+            <div class="block">
+                <div class="label"><label for="attachment">Вложение</label></div>
+                <div class="element">
+                    <input type="file" id="attachment" name="attachment" multiple>
+                </div>
+            </div>
+
+            <div class="block block-row">
+                <div class="row-label">
+                    <label for="agreement">Даю согласие на обработку персональных данных</label>
+                </div>
+                <div class="row-element">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="element">
+                    <input type="submit" value="Отправить">
+                </div>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
